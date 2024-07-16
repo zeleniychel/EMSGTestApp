@@ -11,16 +11,16 @@ import retrofit2.http.Path
 
 interface UsersApi {
     @GET("users")
-    suspend fun getAll(): Response<List<GitUser>>
+    suspend fun getUsers(): Response<List<User>>
 
-    @GET("users/{id}")
-    suspend fun findUser(@Path("id") id:Long): Response<User>
+    @GET("users/{login}")
+    suspend fun getUserById(@Path("login") login: String): Response<GitUser>
 
     @POST("users/{user}")
-    suspend fun addUser(@Body user:User): Response<User>
+    suspend fun addUser(@Body user: User): Response<User>
 
     @DELETE("users/{user}")
-    suspend fun deleteUser(@Path("name") name:String)
+    suspend fun deleteUser(@Path("name") name: String)
 
 }
 

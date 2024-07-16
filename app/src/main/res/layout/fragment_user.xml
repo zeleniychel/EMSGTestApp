@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:textSize="16sp"
-            tools:text="Lydia Westervelt" />
+            tools:text="1" />
 
         <TextView
             android:id="@+id/login"
@@ -31,7 +31,22 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:textSize="14sp"
-            tools:text="mail.ru" />
+            tools:text="login" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="14sp"
+            tools:text="Lydia Westervelt" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="14sp" />
     </LinearLayout>
 
 

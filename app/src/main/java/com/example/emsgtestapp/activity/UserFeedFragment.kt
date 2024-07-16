@@ -17,7 +17,7 @@ import com.example.emsgtestapp.viewmodel.UsersViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class UserFeedFragment:Fragment() {
+class UserFeedFragment : Fragment() {
     private val viewModel by viewModels<UsersViewModel>()
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,16 +25,17 @@ class UserFeedFragment:Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val binding = FragmentFeedUserBinding.inflate(layoutInflater)
-        val adapter = UserAdapter(object : OnInteractionListener{
+        val adapter = UserAdapter(object : OnInteractionListener {
             override fun onClick(user: User) {
-                findNavController().navigate(R.id.action_userFeedFragment_to_userFragment,
+                findNavController().navigate(
+                    R.id.action_userFeedFragment_to_userFragment,
                     bundleOf("key" to user)
                 )
             }
         })
 
         binding.list.adapter = adapter
-        viewModel.data.observe(viewLifecycleOwner){
+        viewModel.data.observe(viewLifecycleOwner) {
             adapter.submitList(it)
         }
 

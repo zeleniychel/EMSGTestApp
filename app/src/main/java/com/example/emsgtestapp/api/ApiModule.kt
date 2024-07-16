@@ -18,7 +18,7 @@ import javax.inject.Singleton
 class ApiModule {
 
     companion object {
-        private const val BASE_URL = "${BuildConfig.BASE_URL}"
+        private const val BASE_URL = BuildConfig.BASE_URL
     }
 
     @Singleton
@@ -31,15 +31,9 @@ class ApiModule {
 
     @Singleton
     @Provides
-    fun provideOkHttp (
-        logging:HttpLoggingInterceptor,
-    ) : OkHttpClient = OkHttpClient.Builder()
-        .addInterceptor { chain ->
-            val newRequestBuilder = chain.request().newBuilder()
-            newRequestBuilder.addHeader("Api-Key", "c1378193-bc0e-42c8-a502-b8d66d189617")
-            val newRequest = newRequestBuilder.build()
-            return@addInterceptor chain.proceed(newRequest)
-        }
+    fun provideOkHttp(
+        logging: HttpLoggingInterceptor,
+    ): OkHttpClient = OkHttpClient.Builder()
         .addInterceptor(logging)
         .build()
 
@@ -52,7 +46,6 @@ class ApiModule {
         .client(okHttpClient)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
-
 
 
     @Singleton
