@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/userFeedFragment">
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.emsgtestapp.activity.UserFragment"
+        android:label="UserFragment" />
+    <fragment
+        android:id="@+id/userFeedFragment"
+        android:name="com.example.emsgtestapp.activity.UserFeedFragment"
+        android:label="UserFeedFragment" >
+        <action
+            android:id="@+id/action_userFeedFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+    </fragment>
+</navigation>
