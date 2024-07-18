@@ -20,22 +20,18 @@ class UsersViewModel @Inject constructor(
     val data: LiveData<List<User>> = _data
 
     init {
-        getAll()
+        getUsers()
     }
 
-    private fun getAll() = viewModelScope.launch {
+    private fun getUsers() = viewModelScope.launch {
         _data.value = repository.getUsers()
     }
 
-    fun addUser() = viewModelScope.launch {
-
+    suspend fun findUser(login: String):List<User>{
+        return repository.findUser(login)
     }
 
-    fun deleteUser() = viewModelScope.launch {
-
-    }
-
-    suspend fun getUserById(login: String): GitUser {
-        return repository.getUserById(login)
+    suspend fun getUserByLogin(login: String): GitUser {
+        return repository.getUserByLogin(login)
     }
 }

@@ -26,7 +26,21 @@ class UserRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun getUserById(login: String): GitUser {
+    override suspend fun findUser(login: String): List<User> {
+        try {
+            val response = api.findUser(login)
+            if (!response.isSuccessful) {
+                throw ApiError(response.code(), response.message())
+            }
+            return response.body()?.items?: throw ApiError(response.code(), response.message())
+        } catch (e: IOException) {
+            throw NetworkError
+        } catch (e: Exception) {
+            throw UnknownError()
+        }
+    }
+
+    override suspend fun getUserByLogin(login: String): GitUser {
         try {
             val response = api.getUserById(login)
             if (!response.isSuccessful) {
@@ -38,13 +52,5 @@ class UserRepositoryImpl @Inject constructor(
         } catch (e: Exception) {
             throw UnknownError()
         }
-    }
-
-    override suspend fun addUser() {
-        TODO("Not yet implemented")
-    }
-
-    override suspend fun deleteUser() {
-        TODO("Not yet implemented")
     }
 }

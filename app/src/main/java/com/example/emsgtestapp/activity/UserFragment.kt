@@ -29,7 +29,7 @@ class UserFragment : Fragment() {
 
         lifecycleScope.launch {
             try {
-                val user = userArg?.login?.let { viewModel.getUserById(it) }
+                val user = userArg?.login?.let { viewModel.getUserByLogin(it) }
                 binding.apply {
                     id.text = user?.id.toString()
                     login.text = user?.login
