@@ -60,6 +60,7 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.dagger.hilt.android)
     kapt(libs.hilt.compiler)
+    implementation (libs.androidx.core.ktx.v180)
     implementation (libs.kotlinx.coroutines.core)
     implementation (libs.kotlinx.coroutines.play.services)
     implementation(libs.converter.gson)
