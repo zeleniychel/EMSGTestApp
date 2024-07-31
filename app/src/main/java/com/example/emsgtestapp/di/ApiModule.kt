@@ -1,6 +1,7 @@
-package com.example.emsgtestapp.api
+package com.example.emsgtestapp.di
 
 import com.example.emsgtestapp.BuildConfig
+import com.example.emsgtestapp.data.remote.UsersApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

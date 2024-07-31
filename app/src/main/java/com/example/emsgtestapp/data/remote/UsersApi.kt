@@ -1,8 +1,8 @@
-package com.example.emsgtestapp.api
+package com.example.emsgtestapp.data.remote
 
-import com.example.emsgtestapp.model.GitUser
-import com.example.emsgtestapp.model.User
-import com.example.emsgtestapp.model.UserResponse
+import com.example.emsgtestapp.data.model.UserResponse
+import com.example.emsgtestapp.data.model.GitUser
+import com.example.emsgtestapp.data.model.User
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
