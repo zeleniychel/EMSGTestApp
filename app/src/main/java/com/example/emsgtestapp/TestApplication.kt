@@ -1,4 +1,4 @@
-package com.example.emsgtestapp.activity
+package com.example.emsgtestapp
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

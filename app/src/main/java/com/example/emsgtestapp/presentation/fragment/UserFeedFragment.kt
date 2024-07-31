@@ -1,4 +1,4 @@
-package com.example.emsgtestapp.activity
+package com.example.emsgtestapp.presentation.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,11 +10,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.emsgtestapp.R
-import com.example.emsgtestapp.adapter.OnInteractionListener
-import com.example.emsgtestapp.adapter.UserAdapter
+import com.example.emsgtestapp.presentation.adapter.OnInteractionListener
+import com.example.emsgtestapp.presentation.adapter.UserAdapter
 import com.example.emsgtestapp.databinding.FragmentFeedUserBinding
-import com.example.emsgtestapp.model.User
-import com.example.emsgtestapp.viewmodel.UsersViewModel
+import com.example.emsgtestapp.data.model.User
+import com.example.emsgtestapp.presentation.viewmodel.UsersViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

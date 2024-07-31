@@ -1,4 +1,4 @@
-package com.example.emsgtestapp.util
+package com.example.emsgtestapp.data.util
 
 import android.content.Context
 import android.view.View

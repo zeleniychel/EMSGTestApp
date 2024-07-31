@@ -1,7 +1,7 @@
-package com.example.emsgtestapp.repository
+package com.example.emsgtestapp.domain
 
-import com.example.emsgtestapp.model.GitUser
-import com.example.emsgtestapp.model.User
+import com.example.emsgtestapp.data.model.GitUser
+import com.example.emsgtestapp.data.model.User
 
 interface UserRepository {
     suspend fun getUsers(): List<User>

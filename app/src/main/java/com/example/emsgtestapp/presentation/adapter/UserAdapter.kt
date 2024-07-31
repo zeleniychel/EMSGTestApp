@@ -1,4 +1,4 @@
-package com.example.emsgtestapp.adapter
+package com.example.emsgtestapp.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.emsgtestapp.databinding.CardUserBinding
-import com.example.emsgtestapp.model.User
+import com.example.emsgtestapp.data.model.User
 
 
 interface OnInteractionListener {

@@ -1,10 +1,11 @@
-package com.example.emsgtestapp.repository
+package com.example.emsgtestapp.data
 
-import com.example.emsgtestapp.api.UsersApi
-import com.example.emsgtestapp.error.ApiError
-import com.example.emsgtestapp.error.NetworkError
-import com.example.emsgtestapp.model.GitUser
-import com.example.emsgtestapp.model.User
+import com.example.emsgtestapp.data.model.GitUser
+import com.example.emsgtestapp.data.model.User
+import com.example.emsgtestapp.data.remote.UsersApi
+import com.example.emsgtestapp.domain.UserRepository
+import com.example.emsgtestapp.domain.error.ApiError
+import com.example.emsgtestapp.domain.error.NetworkError
 import java.io.IOException
 import javax.inject.Inject
 

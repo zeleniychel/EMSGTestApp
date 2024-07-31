@@ -1,4 +1,4 @@
-package com.example.emsgtestapp.activity
+package com.example.emsgtestapp.presentation.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import com.example.emsgtestapp.R

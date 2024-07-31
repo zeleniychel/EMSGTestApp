@@ -1,4 +1,4 @@
-package com.example.emsgtestapp.error
+package com.example.emsgtestapp.domain.error
 
 import java.io.IOException
 

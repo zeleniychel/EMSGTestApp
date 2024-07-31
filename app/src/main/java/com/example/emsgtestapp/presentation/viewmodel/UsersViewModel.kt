@@ -1,12 +1,12 @@
-package com.example.emsgtestapp.viewmodel
+package com.example.emsgtestapp.presentation.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.emsgtestapp.model.GitUser
-import com.example.emsgtestapp.model.User
-import com.example.emsgtestapp.repository.UserRepository
+import com.example.emsgtestapp.data.model.GitUser
+import com.example.emsgtestapp.data.model.User
+import com.example.emsgtestapp.domain.UserRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
